@@ -1,78 +1,65 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import QrCodeIcon from '@mui/icons-material/QrCode';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import AssessmentIcon from '@mui/icons-material/Assessment';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 function NavBar() {
   return (
-    // <nav className="navbar navbar-expand-lg" style={{backgroundColor: "#8BBCCC", colors: "#06283D"}}>
-    //     <div className="container-fluid">
-    //         {/* <div className="title"> */}
-    //             <Link className="navbar-brand fs-3" to="/"><img class="logo" src="/images/gujarat-police-logo.png" alt="" width="60px"/>e-Pratikriya</Link>
-    //             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    //                 <span class="navbar-toggler-icon"></span>
-    //             </button>
-    //         {/* </div> */}
-
-            
-            
-    //         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-    //             <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
-    //                 <li className="nav-item">
-    //                 <Link className="nav-link active" aria-current="page" href="#">Dashboard</Link>
-    //                 </li>
-    //                 <li className="nav-item">
-    //                 <Link className="nav-link" href="#">Generate QR Code</Link>
-    //                 </li>
-    //                 <li className="nav-item">
-    //                 <Link className="nav-link">Report</Link>
-    //                 </li>
-    //                 <li className="nav-item">
-    //                 <Link className="nav-link">Profile</Link>
-    //                 </li>
-    //             </ul>
-    //         </div>
-    //         {/* <div class="log-out">
-    //             <button class="btn btn-outline-dark" type="submit">Log Out</button>
-    //         </div> */}
-    //     </div>
-    // </nav>
- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Generate QR Code</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+    <nav id="sidebarMenu" className="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+    <div className="position-sticky pt-3 sidebar-sticky">
+      <ul className="nav flex-column">
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="#">
+            {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-home align-text-bottom" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> */}
+            <DashboardIcon style={{marginRight:"3px", marginBottom:"2px"}} />
+            Dashboard
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"/></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+          <hr/>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+        
+        <li className="nav-item">
+          <a className="nav-link" href="#">
+            {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-file align-text-bottom" aria-hidden="true"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg> */}
+            <QrCodeIcon style={{marginRight:"3px"}}/>
+            Generate QR Code
+          </a>
+          <hr/>
         </li>
+        
+        <li className="nav-item">
+          <a className="nav-link" href="#">
+            {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-shopping-cart align-text-bottom" aria-hidden="true"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> */}
+            <AccountCircleIcon style={{marginRight:"3px"}}/>
+            Profile
+          </a>
+          <hr/>
+        </li>
+        
+        <li className="nav-item">
+          <a className="nav-link" href="#">
+            {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-bar-chart-2 align-text-bottom" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg> */}
+            <AssessmentIcon style={{marginRight:"3px"}}/>
+            Reports
+          </a>
+          <hr/>
+        </li>
+        
+        <li className="navbar-log-out nav-item">
+          <a className="nav-link" href="#">
+            {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-bar-chart-2 align-text-bottom" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg> */}
+            <LogoutIcon style={{marginRight:"3px"}}/>
+            Log Out
+          </a>
+          <hr/>
+        </li>
+        
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+
+      
     </div>
-  </div>
-</nav>
-    
+  </nav>
     )
 }
 
